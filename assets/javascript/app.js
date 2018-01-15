@@ -93,7 +93,7 @@ $(".coolGifs").on("click", ".giphy", function(evt){
 
   $("#submitButton").on("click", function(evt){
     evt.preventDefault();
-    createNewButton();
+    createNewButtons();
   });
 // $('.parallax').parallax();
 });
