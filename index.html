@@ -9,6 +9,9 @@
   </head>
   <body>
     <div class="container">
+<!--  <div class="parallax-container">
+        <div class="parallax"><img src="./assets/images/ravine.jpg"></div>
+      </div> -->
       <div class="carousel carousel-slider center box blue" data-indicators="true">
         <div class="carousel-item">
           <h1>Welcome to Giphy-ness</h1>
@@ -18,22 +21,31 @@
   
       <div class="row">
         <button class="col m4 offset-m4 buttons">
-          <div class="btn" id="added_btn">
+          <div class="btn added_btn">
           </div><!-- js insert buttons -->
         </button>
       </div>
-      <div class="coolGifs">
+      <div class="col m8 offset-m2 coolGifs">
         <!-- gifs output here -->
       </div>
-
-
-
+      <div class="search">
+        <form>
+          <div class="col m4 offset-m4 btn">
+            <input type="text" id="added_btn" placeholder="Search GIPHY">
+            <button id="submitButton">Add</button>
+          </div>
+        </form>
+<!--       <div>
+        <button class="col m4 offset-m4" id="submitButton" type="text">Add Button
+        </button>
+      </div> -->
     </div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous">
     </script>
+    <script src="./key.js"></script>
     <script type="text/javascript" src="./assets/javascript/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js">
     </script>

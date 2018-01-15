@@ -1,6 +1,11 @@
 body{
   background: url("../images/ravine.jpg");
-  background: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.coolGifs{
+  padding: 50px;
 }
 
 .buttons{
@@ -13,3 +18,9 @@ body{
 .btn {
   color: black;
 }
+/*.parallax-container {
+  width: 1200px;
+}*/
+/*.parallax{
+  height: 500px;
+}*/
