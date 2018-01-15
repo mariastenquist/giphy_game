@@ -1,5 +1,5 @@
 body{
-  background: url("../images/ravine.jpg");
+  background: url("../images/critter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -17,6 +17,14 @@ body{
 }
 .btn {
   color: black;
+}
+.search {
+  padding-bottom: 50px;
+}
+.newGifs{
+  float: right;
+  margin-right: 80px;
+  /*width: 25%;*/
 }
 /*.parallax-container {
   width: 1200px;

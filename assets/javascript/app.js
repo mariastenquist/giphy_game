@@ -52,15 +52,15 @@ $(".buttons").on("click", "button", function(evt){
       // $(".coolGifs").prepend("<img src='" + response.data[i].images.fixed_width_still.url + "' />");
     //data-state, data-anim, data-still, img giphy class
     // console.log(response.data[i].title);
-    var newDiv = $("<div />").addClass("divContent");
+    var newDiv = $("<div />").addClass("newGifs");
     var newImg = $("<img class='giphy' />");
     var rating= response.data[i].rating;
     var p = $('<h5>').text("Ratings: " + rating);
 
     newImg.attr("data-state", "still")
-        .attr("data-still", response.data[i].images.fixed_height_small_still.url)
-        .attr("data-anim", response.data[i].images.fixed_height_small.url)
-        .attr("src", response.data[i].images.fixed_height_small_still.url)
+        .attr("data-still", response.data[i].images.fixed_width_still.url)
+        .attr("data-anim", response.data[i].images.fixed_width.url)
+        .attr("src", response.data[i].images.fixed_width_still.url)
       // then, the last thing we do is we append the newImg to the coolGifs container
       
       newDiv.append(newImg).append(p);
