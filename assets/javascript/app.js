@@ -8,7 +8,7 @@ $('.carousel.carousel-slider').carousel({fullWidth: true});
 
 var topics = ["kittehs", "puppies", "sugar gliders", "tigers", "otters", "chinchillas"];
 console.log(topics);
-var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + topics + "&api_key=dc6zaTOxFJmzC";
+var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + topics + "&api_key=dc6zaTOxFJmzC";
 console.log(queryUrl);
 
 function createButtons(){
@@ -39,7 +39,7 @@ $(".buttons").on("click", "button", function(evt){
   var buttonText = $(this).attr("data-name");
   // $(".buttons").html(buttonText);
   // var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + buttonText + "&limit=15&api_key="+ key;
-  var queryUrl = "http://api.giphy.com/v1/gifs/search?q=" + buttonText + "&limit=10&api_key=dc6zaTOxFJmzC";
+  var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + buttonText + "&limit=10&api_key=dc6zaTOxFJmzC";
   console.log(buttonText);
 
   $.ajax({
@@ -54,8 +54,9 @@ $(".buttons").on("click", "button", function(evt){
     // console.log(response.data[i].title);
     var newDiv = $("<div />").addClass("newGifs");
     var newImg = $("<img class='giphy' />");
-    var rating= response.data[i].rating;
-    var p = $('<h5>').text("Ratings: " + rating);
+    var rating = response.data[i].rating;
+    console.log(rating);
+    var p = $('<h5>').text("Ratings: " + rating.toUpperCase());
 
     newImg.attr("data-state", "still")
         .attr("data-still", response.data[i].images.fixed_width_still.url)
